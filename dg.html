@@ -4,8 +4,9 @@
     <title>Gowtham's Coffee</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body{
+  
+        	 <style>
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -13,9 +14,9 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center center; /* Center the background image */
-            opacity: 0.9; /* Adjust opacity as needed */
+            opacity: 0.8; /* Adjust opacity as needed */
         }
-	 {
+	{
             font-family: Arial, sans-serif;
             background-color: #F5F5F5;
             margin: 0;
@@ -24,17 +25,12 @@
         h1 {
             text-align: center;
             color: #8B0000;
-            margin-bottom: 30px;
-        }
-        .container {
-            background-color: #FFF;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            padding: 20px;
         }
         table {
-            width: 100%;
+            margin: auto;
             border-collapse: collapse;
+            background-color: #FFFFFF;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
         }
         th, td {
             border: 1px solid #8B0000;
@@ -64,9 +60,6 @@
         label {
             font-weight: bold;
         }
-        .form-group {
-            margin-bottom: 20px;
-        }
         input[type="text"],
         select,
         input[type="number"] {
@@ -76,9 +69,8 @@
             border: 1px solid #ccc;
             border-radius: 3px;
             box-sizing: border-box;
-            font-size: 18px;
         }
-        #btn_submit {
+ #btn_submit {
             font-size: 24px;
         }
         #time {
@@ -88,24 +80,13 @@
             text-align: center;
             margin-top: 20px;
         }
-        /* Additional CSS3 styles */
-        .jumbotron {
-            background-image: url('https://example.com/your-background-image.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            color: #FFFFFF;
-            padding: 40px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
+       
     </style>
+
 </head>
 <body>
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="text-center">Gowtham's Coffee</h1>
-        </div>
+        <h1 class="text-center text-danger"><b><i>GOWTHAM'S CAFE</i></b></h1>
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
@@ -116,57 +97,64 @@
             <tbody>
                 <tr>
                     <td><b>Espresso</b></td>
-                    <td><b>Rs30.00</b></td>
+                    <td><b>Rs 30.00</b></td>
                 </tr>
                 <tr>
                     <td><b>Americano</b></td>
-                    <td><b>Rs40.00</b></td>
+                    <td><b>Rs 40.00</b></td>
                 </tr>
                 <tr>
                     <td><b>Cappuccino</b></td>
-                    <td><b>Rs50.00</b></td>
+                    <td><b>Rs 50.00</b></td>
                 </tr>
                 <tr>
                     <td><b>Latte</b></td>
-                    <td><b>Rs60.00</b></td>
+                    <td><b>Rs 60.00</b></td>
                 </tr>
                 <tr>
                     <td><b>Mocha</b></td>
-                    <td><b>Rs60.00</b></td>
+                    <td><b>Rs 60.00</b></td>
                 </tr>
             </tbody>
         </table>
         <form>
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name">
-            </div>
-            <div class="form-group">
-                <label for="coffee">Coffee:</label>
-                <select class="form-control" id="coffee" name="coffee">
-                    <option value="Espresso">Espresso</option>
-                    <option value="Americano">Americano</option>
-                    <option value="Cappuccino">Cappuccino</option>
-                    <option value="Latte">Latte</option>
-                    <option value="Mocha">Mocha</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="quantity">Quantity:</label>
-                <input type="number" class="form-control" id="quantity" name="quantity" min="1" max="10">
-            </div>
-            <button type="button" class="btn btn-danger" onclick="orderNow()" id="btn_submit">Order Now</button>
-            <div><span id="time" class="display-1"></span> Seconds!</div>
-        </form>
-    </div>
+            <div style="width: 100%;margin-top: 71px;margin-left: 71px;"> 
+<label style="font-size: 40px;">Name</label></br>
+<input style="width: 800px;font-size: 40px;height:80px;padding:5px;" type="text" id="txt_name">
 
-    <script>
+</br>
+</br>
+<label style="font-size: 40px;">Mobile Number</label></br>
+<input style="width: 800px;font-size: 40px;height:80px;padding:5px;" type="text" id="txt_mobile">
+</br>
+</br>
+<label style="font-size: 40px;" for="cars">Select Coffee type:</label></br>
+<select style="width: 800px;font-size: 40px;height:80px;padding:5px;" name="cofee" id="sel_item">
+           	 <option value="Espresso">Espresso</option>
+		  <option value="Americano">Americano</option>
+		    <option value="Cappuccino">Cappuccino</option>
+			<option value="Latte">Latte</option>
+		      <option value="Mocha">Mocha</option>
+</select>
+</br>
+</br>
+<label style="font-size: 40px;">Quantity</label></br>
+<input style="width: 800px;font-size: 40px;height:80px;padding:5px;" type="number" id="txt_qty">
+</br>
+</br>
+<button style="width: 800px;font-size: 40px;height:80px;padding:5px;" type="button" onclick="orderNow();" id="btn_submit">Order Now</button>
+</br>
+</br>
+<div><span id="time" style="font-size:100px;"></span> Seconds!</div>
+</div>
+</div>
+   <script>
 function orderNow() {
  
   var name   = document.getElementById("txt_name").value;
   var mobile = document.getElementById("txt_mobile").value;
   var item   = document.getElementById("sel_item").value;
-  var qty    = document.getElementById("txt_qty").value;
+  var quantity= document.getElementById("txt_quantity").value;
 
   if(name.length ==0){
    alert("Enter Name");
@@ -198,7 +186,7 @@ function orderNow() {
    return;
   }
 
-  if(qty=="0"){
+  if(quantity=="0"){
    alert("Enter Qty greater than 0");
    return;
   }
@@ -212,12 +200,12 @@ document.getElementById("btn_submit").disabled = true;
 
 window.location.href = "https://dealsms.in/api/send?number=91"+mobile+"&type=text&message="+customer_msg+"&instance_id=651EF9CC5A4B5&access_token=651ef1dbbfeef";
 
-var admin_msg = "Dear GOWTHAM, new order received </br>*"+qty+"  x  "+item+"*</br></br>*Customer: "+name+"*</br>Mobile: "+mobile+"";
+var admin_msg = "Dear GOWTHAM, new order received </br>*"+quantity+"  x  "+item+"*</br></br>*Customer: "+name+"*</br>Mobile: "+mobile+"";
 
 
 
 window.location.href = "https://dealsms.in/api/send?number=919663642995&type=text&message="+admin_msg+"&instance_id=651EF9CC5A4B5&access_token=651ef1dbbfeef";
-var customer_msg = "Dear *"+name+" *Your order has been placed: "+qty+"  x  "+item+""; 
+var customer_msg = "Dear *"+name+" *Your order has been placed: "+quantity+"  x  "+item+""; 
 
 }
 	
@@ -249,7 +237,7 @@ window.onload = function () {
     startTimer(fiveMinutes, display);
 };
 </script>
- <!-- Add Bootstrap and jQuery JavaScript libraries for Bootstrap functionality -->
+    <!-- Add Bootstrap and jQuery JavaScript libraries for Bootstrap functionality -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
